@@ -950,12 +950,16 @@ class CotizacionController extends Controller
 		$fpdf::SetFont('Arial','',$tam_font);
 		$fpdf::Cell(58, $alto, utf8_decode($modelo), '', 0, "L");
 
-		$fpdf::Ln();
-		$fpdf::SetXY(15, $fpdf::GetY());
-		$fpdf::SetFont('Arial','B',$tam_font);
-		$fpdf::Cell(25, $alto, utf8_decode('Versión:'), '', 0, "L");
-		$fpdf::SetFont('Arial','',$tam_font);
-		$fpdf::Cell(58, $alto, utf8_decode($version), '', 0, "L");
+    $fpdf::Ln();
+    $fpdf::SetXY(15, $fpdf::GetY());
+    $fpdf::SetFont('Arial', 'B', $tam_font);
+    $fpdf::Cell(25, $alto, utf8_decode('Versión:'), '', 0, "L");
+    
+    $fpdf::SetFont('Arial', '', $tam_font - 1);
+    $fpdf::SetXY(40, $fpdf::GetY());
+    $fpdf::MultiCell(100, $alto, utf8_decode($version), 0, "L");
+    
+    $fpdf::SetY($fpdf::GetY() - 5);
 
 		$fpdf::Ln();
 		$fpdf::SetXY(15, $fpdf::GetY());
