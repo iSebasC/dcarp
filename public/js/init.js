@@ -125674,6 +125674,23 @@
                                                                                                             }
                                                                                                         ),
                                                                                                         t._v(
+                                                                                                          " "
+                                                                                                        ),
+                                                                                                        a(
+                                                                                                            "td",
+                                                                                                            {
+                                                                                                                staticClass:
+                                                                                                                    "text-right",
+                                                                                                                domProps:
+                                                                                                                    {
+                                                                                                                        textContent:
+                                                                                                                            t._s(
+                                                                                                                                e.ubicacion_registro
+                                                                                                                            ),
+                                                                                                                    },
+                                                                                                            }
+                                                                                                        ),
+                                                                                                        t._v(
                                                                                                             " "
                                                                                                         ),
                                                                                                         a(
@@ -126056,6 +126073,10 @@
                                 ]),
                                 t._v(" "),
                                 a("th", { staticClass: "text-center" }, [
+                                    t._v("Ubicación Registro"),
+                                ]),
+                                t._v(" "),
+                                a("th", { staticClass: "text-center" }, [
                                     t._v("Operaciones"),
                                 ]),
                             ]),
@@ -126319,6 +126340,11 @@
                                                                   a.entidad
                                                           ).value =
                                                               u.data.producto.nombre),
+                                                          (document.getElementById(
+                                                                "ubicacion_registro_" +
+                                                                    a.entidad
+                                                            ).value =
+                                                                u.data.producto.ubicacion_registro),
                                                           (document.getElementById(
                                                               "nombre_llanta_" +
                                                                   a.entidad
@@ -126628,6 +126654,9 @@
                                           .getElementById("nombre_ocultar")
                                           .classList.remove("ocultar"),
                                       document
+                                          .getElementById("ubicacion_registro_ocultar")
+                                          .classList.remove("ocultar"),
+                                      document
                                           .getElementById(
                                               "marcarepuesto_ocultar"
                                           )
@@ -126729,6 +126758,9 @@
                                           .getElementById("nombre_ocultar")
                                           .classList.add("ocultar"),
                                       document
+                                          .getElementById("ubicacion_registro_ocultar")
+                                          .classList.remove("ocultar"),
+                                      document
                                           .getElementById(
                                               "marcarepuesto_ocultar"
                                           )
@@ -126811,6 +126843,9 @@
                                           .getElementById("nombre_ocultar")
                                           .classList.add("ocultar"),
                                       document
+                                          .getElementById("ubicacion_registro_ocultar")
+                                          .classList.remove("ocultar"),
+                                      document
                                           .getElementById(
                                               "marcarepuesto_ocultar"
                                           )
@@ -126871,6 +126906,9 @@
                                       document
                                           .getElementById("nombre_ocultar")
                                           .classList.add("ocultar"),
+                                      document
+                                          .getElementById("ubicacion_registro_ocultar")
+                                          .classList.remove("ocultar"),
                                       document
                                           .getElementById(
                                               "marcarepuesto_ocultar"
@@ -126950,6 +126988,9 @@
                                       .getElementById("nombre_ocultar")
                                       .classList.remove("ocultar"),
                                   document
+                                      .getElementById("ubicacion_registro_ocultar")
+                                      .classList.remove("ocultar"),
+                                  document
                                       .getElementById("marcarepuesto_ocultar")
                                       .classList.remove("ocultar"),
                                   document
@@ -127025,6 +127066,9 @@
                                       .getElementById("nombre_ocultar")
                                       .classList.add("ocultar"),
                                   document
+                                      .getElementById("ubicacion_registro_ocultar")
+                                      .classList.remove("ocultar"),
+                                  document
                                       .getElementById("marcarepuesto_ocultar")
                                       .classList.add("ocultar"),
                                   document
@@ -127070,6 +127114,9 @@
                                   document
                                       .getElementById("nombre_ocultar")
                                       .classList.add("ocultar"),
+                                  document
+                                          .getElementById("ubicacion_registro_ocultar")
+                                          .classList.remove("ocultar"),
                                   document
                                       .getElementById("marcarepuesto_ocultar")
                                       .classList.add("ocultar"),
@@ -127131,6 +127178,9 @@
                                   document
                                       .getElementById("nombre_ocultar")
                                       .classList.add("ocultar"),
+                                  document
+                                          .getElementById("ubicacion_registro_ocultar")
+                                          .classList.remove("ocultar"),
                                   document
                                       .getElementById("marcarepuesto_ocultar")
                                       .classList.add("ocultar"),
@@ -127929,6 +127979,76 @@
                                                                                                                 ),
                                                                                                             ]
                                                                                                         ),
+                                                                                                        t._v(
+                                                                                                          " "
+                                                                                                      ),
+                                                                                                      a(
+                                                                                                          "div",
+                                                                                                          {
+                                                                                                              staticClass:
+                                                                                                                  "col-md-4 col-xs-12 ocultar",
+                                                                                                              attrs: {
+                                                                                                                  id: "ubicacion_registro_ocultar",
+                                                                                                              },
+                                                                                                          },
+                                                                                                          [
+                                                                                                              a(
+                                                                                                                  "div",
+                                                                                                                  {
+                                                                                                                      staticClass:
+                                                                                                                          "form-group ml-1",
+                                                                                                                  },
+                                                                                                                  [
+                                                                                                                      a(
+                                                                                                                          "label",
+                                                                                                                          {
+                                                                                                                              attrs: {
+                                                                                                                                  for:
+                                                                                                                                      "ubicacion_registro_" +
+                                                                                                                                      t.entidad,
+                                                                                                                              },
+                                                                                                                          },
+                                                                                                                          [
+                                                                                                                              t._v(
+                                                                                                                                  "Ubicación Registro "
+                                                                                                                              ),
+                                                                                                                              a(
+                                                                                                                                  "span",
+                                                                                                                                  {
+                                                                                                                                      staticClass:
+                                                                                                                                          "text-danger",
+                                                                                                                                  },
+                                                                                                                                  [
+                                                                                                                                      t._v(
+                                                                                                                                          "*"
+                                                                                                                                      ),
+                                                                                                                                  ]
+                                                                                                                              ),
+                                                                                                                          ]
+                                                                                                                      ),
+                                                                                                                      t._v(
+                                                                                                                          " "
+                                                                                                                      ),
+                                                                                                                      a(
+                                                                                                                          "input",
+                                                                                                                          {
+                                                                                                                              staticClass:
+                                                                                                                                  "form-control form-control-sm",
+                                                                                                                              attrs: {
+                                                                                                                                  type: "text",
+                                                                                                                                  id:
+                                                                                                                                      "ubicacion_registro_" +
+                                                                                                                                      t.entidad,
+                                                                                                                                  name: "ubicacion_registro",
+                                                                                                                                  maxlength:
+                                                                                                                                      "255",
+                                                                                                                              },
+                                                                                                                          }
+                                                                                                                      ),
+                                                                                                                  ]
+                                                                                                              ),
+                                                                                                          ]
+                                                                                                      ),
                                                                                                         t._v(
                                                                                                             " "
                                                                                                         ),
@@ -130118,8 +130238,12 @@
                                                                                                                 ),
                                                                                                             ]
                                                                                                         ),
+                                                                                                        
+                                                                                                        
                                                                                                     ]
                                                                                                 ),
+
+
                                                                                             ]
                                                                                         ),
                                                                                         t._v(
