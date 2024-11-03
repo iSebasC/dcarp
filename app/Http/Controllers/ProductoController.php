@@ -149,7 +149,8 @@ class ProductoController extends Controller
 		ELSE 'MUELLES' END) as tipoProducto"), 
 		DB::Raw("(CASE WHEN producto.codProveedor IS NULL THEN '-' ELSE producto.codProveedor END) as codProveedor"),
 		DB::Raw("(CASE WHEN producto.tipollanta IS NULL THEN '-' ELSE producto.tipollanta END) as tipollanta"),
-		DB::Raw("(CASE WHEN producto.tipoBateria IS NULL THEN '-' ELSE (CASE WHEN producto.tipoBateria = 'PR' THEN 'Profesional' ELSE (CASE WHEN producto.tipoBateria = 'AD' THEN 'Alto Desempeño' ELSE 'Platinium' END) END) END) as tipobateria"))
+		DB::Raw("(CASE WHEN producto.tipoBateria IS NULL THEN '-' ELSE (CASE WHEN producto.tipoBateria = 'PR' THEN 'Profesional' ELSE (CASE WHEN producto.tipoBateria = 'AD' THEN 'Alto Desempeño' ELSE 'Platinium' END) END) END) as tipobateria"),
+		DB::Raw("(CASE WHEN producto.ubicacion_registro IS NULL THEN '-' ELSE producto.ubicacion_registro END) as ubicacion_registro"))
 		->orderBy('producto.nombre','ASC');
 		
 		// dd($productos->toSql());
@@ -605,6 +606,7 @@ class ProductoController extends Controller
 				$producto->tipoBateria    = ($tipo == 'B'?$request->get('select_tipobateria'):null);
 				$producto->idMargenGanancia= $id_margen;
 				$producto->codSunat=$request->get('codigo_sunat');
+				$producto->ubicacion_registro = $request->get('ubicacion_registro');
 				if ($id == 0) {
 					$producto->save();
 					$this->guardarStock($producto->id);
